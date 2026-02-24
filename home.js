@@ -24,19 +24,45 @@ function calculateJob(){
 calculateJob()
 
 function toggleStyle(id){
-    allFilterBtn.classList.remove('bg-blue-700','text-white');
-    interviewFilterBtn.classList.remove('bg-blue-700','text-white');
-    rejectedFilterBtn.classList.remove('bg-blue-700','text-white');
+    allFilterBtn.classList.remove("bg-blue-700","text-white");
+    interviewFilterBtn.classList.remove("bg-blue-700","text-white");
+    rejectedFilterBtn.classList.remove("bg-blue-700","text-white");
 
-    allFilterBtn.classList.add('text-black');
-    interviewFilterBtn.classList.add('bg-blue-700','text-black');
-    rejectedFilterBtn.classList.add('bg-blue-700','text-black');
+    allFilterBtn.classList.add("bg-white","text-black");
+    interviewFilterBtn.classList.add("bg-white","text-black");
+    rejectedFilterBtn.classList.add("bg-white","text-black");
 
     console.log(id);
 
-    const selected = document.getElementById(id)
+    const selected = document.getElementById(id);
     console.log(selected);
 
-    // selected.classList.remove('text-black')
-    selected.classList.add('bg-blue-700','text-white')
+    selected.classList.remove("bg-white","text-black")
+    selected.classList.add("bg-blue-700","text-white")
+}
+
+mainContainer.addEventListener('click',function(event){
+    const parenNode = event.target.parentNode.parentNode;
+    const jobName =parenNode.querySelector ('#job-name').innerText;
+    const jobQuality = parenNode.querySelector('#details').innerText
+    const salaryInfo = parenNode.querySelector('salary').innerText
+    const statusInfo = parenNode.querySelector('status').innerText
+    const notesInfo = parenNode.querySelector('notes').innerText
+})
+
+const cardInfo = {
+jobName,
+jobQuality,
+salaryInfo,
+statusInfo,
+notesInfo
+}
+ 
+const jobExist = interviewList.find(item=>item.jobName == cardInfo.jobName)
+
+if (!jobExist) {
+    interviewList.push(cardInfo)
+}
+else{
+
 }
