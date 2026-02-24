@@ -61,8 +61,6 @@ notesInfo
 const jobExist = interviewList.find(item=>item.jobName == cardInfo.jobName)
 
 if (!jobExist) {
-    interviewList.push(cardInfo)
+    interviewList.push(cardInfo);
 }
-else{
 
-}
