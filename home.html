@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job document</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <!-- twlind+desiui -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<!-- icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    *{
+          font-family: "Outfit", sans-serif;
+
+    }
+</style>
+<body>
+    <nav class="w-11/12  mx-auto">
+        <h1 class="text-3xl py-5 font-bold " >Job Application Tracker</h1>
+        <!-- parent -->
+        <div class="p-5 border-none shadow-md justify-between grid grid-cols-3">
+            <div  class="px-3">
+        <p>Total</p>
+          <p class="font-bold text-xl">8</p>
+            </div>
+            <div>
+                <p>Interview</p>
+                <p class="font-bold text-xl text-green-600">0</p>
+            </div>
+            <div>
+                <p>Rejected</p>
+                <p class="font-bold text-xl text-red-600">0</p>
+            </div>
+        </div>
+    </nav>
+    <section class="w-11/12 mx-auto">
+        <div class="flex justify-between bg-slate-50 p-5 py-3">
+             <div class="font-bold text-xl">Available job</div>
+        <div>0 jobs</div>
+        </div>
+       
+<!-- button -->
+
+<div id="all-btn" class="justify-center pt-5" >
+<button class="btn bg-slate-100 mx-1" >All</button>
+<button class="btn mx-2">Interview</button>
+<button class="btn">Rejected</button>
+</div>
+
+    </section>
+
+    <section class="p-20 bg-slate/50 shadow-sm ">
+        <div class="  w-11/12 mx-auto justify-items-center ">
+            <img src="jobs.png" alt="">
+            <h2 class="text-xl font-bold pt-5 pb-5">No jobs available</h2>
+            <p>Check back soon for new job opportunities</p>
+        </div>
+    </section>
